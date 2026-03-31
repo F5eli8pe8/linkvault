@@ -1,7 +1,6 @@
 import { prisma } from "@/app/lib/prisma";
 import { NextResponse } from "next/server";
 
-// Deletar um bookmark
 export async function DELETE(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
@@ -15,7 +14,6 @@ export async function DELETE(
   return NextResponse.json({ message: "Deletado com sucesso" });
 }
 
-// Favoritar/desfavoritar um bookmark
 export async function PATCH(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
